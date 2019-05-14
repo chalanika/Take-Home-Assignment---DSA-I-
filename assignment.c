@@ -2,5 +2,5 @@
 
 int main{
 
-printf("hello chala sew");
+printf("hello");
 }
