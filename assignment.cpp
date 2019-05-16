@@ -33,6 +33,10 @@ int main(){
 			
 			if(ptr != NULL){
 				shelf->prev = ptr;
+				ptr->next= shelf;
+			}else{
+				shelf->prev=NULL;
+				start = shelf;
 			}
 			ptr = shelf;			
 		}
