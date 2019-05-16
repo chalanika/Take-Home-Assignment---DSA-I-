@@ -8,10 +8,9 @@ typedef struct node{
 	node *next;
 	node *prev;
 
-}shelf;
+}node;
 
-
-
+node *start;
 
 int main(){
 	
@@ -24,9 +23,13 @@ int main(){
 		cout << "Enter no of  shelves: ";
 		cin >> N;
 		
-		cout << "Enter no of books : ";
-		for(int i=0; i<N; i++){
+		cout << "Enter no of books : ";	
+		for(int i=1; i<=N; i++){
+			node *shelf = new node();
+			shelf->rank=i;
 			cin >> n ;
+			shelf->no_of_books=n;
+			
 		}
 		cout << "Enter no of  queries : ";
 		cin >> Q;
