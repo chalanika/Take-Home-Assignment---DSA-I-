@@ -10,7 +10,7 @@ typedef struct node{
 
 }node;
 
-node *start;
+node *start = Null;
 
 int main(){
 	
@@ -27,10 +27,16 @@ int main(){
 		for(int i=1; i<=N; i++){
 			node *shelf = new node();
 			shelf->rank=i;
-			cin >> n ;
-			shelf->no_of_books=n;
+			cin >> shelf->no_of_books ;
+			shelf->next=Null;
+			if(start != Null){
+				shelf->prev=start;
+			}
+			start=shelf;
 			
+				
 		}
+		
 		cout << "Enter no of  queries : ";
 		cin >> Q;
 		
@@ -40,7 +46,7 @@ int main(){
 			cin >> arr[i] ;
 		}
 		
-	cout <<"---------------"<<endl;
+		cout <<"---------------"<<endl;
 		
 	}
 	
