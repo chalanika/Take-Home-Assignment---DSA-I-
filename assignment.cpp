@@ -31,7 +31,7 @@ int main(){
 			cin >> shelf->no_of_books ;
 			shelf->next = NULL;
 			
-			if(start != NULL){
+			if(ptr != NULL){
 				shelf->prev = ptr;
 			}
 			ptr = shelf;			
