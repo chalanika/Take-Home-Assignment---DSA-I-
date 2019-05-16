@@ -1,14 +1,16 @@
 #include <iostream>
 using namespace std;
 
-struct node{
+typedef struct node{
 	
 	int no_of_books;
 	int rank;
-	struct node *next;
-	struct node *prev;
+	node *next;
+	node *prev;
 
-};
+}shelf;
+
+
 
 
 int main(){
@@ -30,12 +32,12 @@ int main(){
 		cin >> Q;
 		
 		cout << "Enter queries : ";
-		int arr[];
+		int arr[Q];
 		for(int i=0; i<Q; i++){
 			cin >> arr[i] ;
 		}
 		
-	
+	cout <<"---------------"<<endl;
 		
 	}
 	
