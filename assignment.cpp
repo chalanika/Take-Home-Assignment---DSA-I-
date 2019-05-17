@@ -44,11 +44,26 @@ int main(){
 		cout << "Enter no of  queries : ";
 		cin >> Q;
 		
-		cout << "Enter queries : ";
-		int arr[Q];
-		for(int i=0; i<Q; i++){
-			cin >> arr[i] ;
+		cout << "Enter queries : "<<endl;
+		int a;
+		for(int j=0; j<Q; j++){
+			
+			cin >> a;
+			if(a==0){
+				for(int i=0; i<3; i++){
+					cin >> a;
+					
+				}
+				
+			}else{
+				for(int i=0; i<2; i++){
+					cin >> a;
+					
+				}	
+			}
+			
 		}
+		
 		
 		cout <<"---------------"<<endl;
 		
