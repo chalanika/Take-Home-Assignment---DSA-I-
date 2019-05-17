@@ -45,20 +45,18 @@ int main(){
 		cin >> Q;
 		
 		cout << "Enter queries : "<<endl;
-		int a;
+		int a,arr[4],i=0;
 		for(int j=0; j<Q; j++){
 			
-			cin >> a;
-			if(a==0){
-				for(int i=0; i<3; i++){
-					cin >> a;
-					
+			cin >> arr[i];
+			if(arr[i]==0){
+				for(int i=1; i<4; i++){
+					cin >> arr[i];	
 				}
 				
 			}else{
-				for(int i=0; i<2; i++){
-					cin >> a;
-					
+				for(int i=1; i<3; i++){
+					cin >> arr[i];	
 				}	
 			}
 			
