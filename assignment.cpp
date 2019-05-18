@@ -12,10 +12,11 @@ typedef struct node{
 
 node *start = NULL;
 node *ptr = NULL;
+int T,N,n,Q,head,tail;
 
 int main(){
 	
-	int T,N,n,Q;
+
 	
 	cout << "Enter no of Test cases: ";
 	cin >> T;
@@ -53,13 +54,17 @@ int main(){
 				for(int i=1; i<4; i++){
 					cin >> arr[i];	
 				}
-				
+					head = arr[i];
+					tail = arr[i+1];
+					sort(head,tail);	
 			}else{
 				for(int i=1; i<3; i++){
 					cin >> arr[i];	
-				}	
-			}
-			
+				}
+					head = arr[i];
+					tail = arr[i+1]	;
+					sort(head,tail);
+			}	
 		}
 		
 		
@@ -68,3 +73,18 @@ int main(){
 	}
 	
 }
+
+void sort(node *start){
+	
+	node *i,*j;
+	
+	for(i=start; i->next=NULL;  i=i->next){
+		for(j=i>next)
+	}
+}
+
+
+
+
+
+
