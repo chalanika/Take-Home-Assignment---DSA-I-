@@ -5,6 +5,7 @@ typedef struct node{
 	
 	int no_of_books;
 	int rank;
+	int sorted;
 	node *next;
 	node *prev;
 
@@ -12,7 +13,8 @@ typedef struct node{
 
 node *start = NULL;
 node *ptr = NULL;
-int T,N,n,Q,head,tail;
+int T,N,n,Q;
+node*head,node*tail =NULL;
 
 int main(){
 	
@@ -30,6 +32,7 @@ int main(){
 			node *shelf = new node();
 			shelf->rank = i;
 			cin >> shelf->no_of_books ;
+			shelf->sorted = 0;
 			shelf->next = NULL;
 			
 			if(ptr != NULL){
@@ -74,12 +77,23 @@ int main(){
 	
 }
 
-void sort(node *start){
+void sort(node *head, node*tail){
 	
 	node *i,*j;
+	int temp;
+	head->sorted = head->no_of_books;
 	
-	for(i=start; i->next=NULL;  i=i->next){
-		for(j=i>next)
+	for(i=head; i->next=tail->next;  i=i->next){
+		
+		j=i>next;
+		
+		while(j->prev->sorted > j->no_of_books && j->prev != NULL){
+			temp = i -> sorted;
+			i->sorted= j->no_of_books;
+			j->sorted=temp;
+			j= = j->prev;
+			
+		}
 	}
 }
 
