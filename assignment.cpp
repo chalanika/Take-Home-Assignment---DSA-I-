@@ -106,34 +106,45 @@ void sort(int beg, int end){
 		}
 		p = p->next;
 	}
+	cout << tail->rank;
 
 	node *temp1 = NULL;
 	node *temp2 = NULL;
 	
 	int t;
 	head->sorted = head->no_of_books;
-	cout<< head->sorted;
+
 	temp1=head;
-	while( temp1->next!=tail->next){
-		cout << "vgdftsygiu";
+	while( temp1 !=tail){
+	
 		temp2=temp1->next;
-		
-		while(temp2->prev->sorted > temp2->no_of_books && temp2->prev != NULL){
-			cout << "vjhyfugu";
+	while(temp2->rank > head->rank){
+			
+		if(temp2->prev->sorted >= temp2->no_of_books){
+			cout << "hdftyryf";
 			t = temp1->sorted;
+			cout << t;
 			temp1->sorted= temp2->no_of_books;
+			cout << temp1->sorted;
+			cout<<"njghjhuhu";
 			temp2->sorted=t;
-			temp2= temp2->prev;
+			cout << temp2->sorted;
+			cout<<"hwwlf";
+			
 			
 		}
+		temp2= temp2->prev;
+	}
+		
 		temp1 = temp1->next;
+		cout << temp1->sorted;
 	}
 	
-	node *temp = new node();
-	temp=start;
-	while(temp!=NULL){
-		cout << temp->no_of_books<< temp->rank << temp->sorted<< endl;
-		temp=temp->next;
+	node *x = new node();
+	x=start;
+	while(x!=NULL){
+		cout << x->no_of_books<< x->rank << x->sorted<< endl;
+		x=x->next;
 	}
 
 }
