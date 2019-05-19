@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-void sort(int beg, int end , int find);
+
 
 typedef struct node{
 	
@@ -12,23 +12,24 @@ typedef struct node{
 
 }node;
 
-node *start = NULL;
-node *ptr = NULL;
-int T,N,n,Q,beg,end;
-
+void sort(int beg, int end , int find, node *start);
 
 int main(){
 	
 
 	
+
+int T,N,n,Q;
+
 	cout << "Enter no of Test cases: ";
 	cin >> T;
+	node *start = NULL;
 	
 	for(int i=0; i<T; i++){
 		cout << "Enter no of  shelves: ";
 		cin >> N;
+		node *ptr = NULL;
 		node *start = NULL;
-		
 		cout << "Enter no of books : ";
 		//create node
 		for(int i=1; i<=N; i++){
@@ -63,7 +64,7 @@ int main(){
 					cin >> arr[j];	
 				}
 				
-				sort(arr[1],arr[2],arr[3]);
+				sort(arr[1],arr[2],arr[3],start);
 				
 					
 			}else{
@@ -92,7 +93,7 @@ int main(){
 
 }
 
-void sort(int beg, int end, int find){
+void sort(int beg, int end, int find , node *start){
 	
 	node *head=NULL;
 	node *tail =NULL;
@@ -117,7 +118,7 @@ void sort(int beg, int end, int find){
 	x=start;
 	while(x!=NULL){
 		x->sorted = x->no_of_books;
-		cout << x->rank<<x->sorted<< "fhyu"<<endl;
+	
 		x=x->next;
 	}
 	
